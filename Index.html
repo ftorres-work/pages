@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de la Teoría de la Medida y la Integral de Lebesgue</title>
+    <!-- Enlace al archivo CSS externo para el estilo de la página -->
+    <link rel="stylesheet" href="StyleSheet1.css">
+</head>
+<body>
+    <!-- Encabezado de la página con el título principal -->
+    <header>
+        <h1>Fundamentos de la Teoría de la Medida y la Integral de Lebesgue</h1>
+        <p>Una introducción a los conceptos clave y aplicaciones de la teoría.</p>
+    </header>
+
+    <!-- Sección introductoria sobre teoría de la medida -->
+    <section id="introduccion">
+        <h2>Introducción</h2>
+        <p>
+            La <strong>teoría de la medida</strong> es una rama de las matemáticas que estudia cómo asignar un "tamaño" o "medida" a conjuntos en un espacio.
+            Es fundamental en áreas como el análisis real y es la base de la integral de Lebesgue.
+        </p>
+        <p>
+            La idea se base en lo siguiente: Existen conjuntos para los cuales no se puede determinar un tamaño o longitud simplemente considerando los extremos del conjunto.
+            Sin embargo siempre es posible considerar las caractirísticas de los subconjuntos y de los elementos de estos conjuntos antemencionados.
+        </p>
+        <center>
+            <figure>
+                <img src="Sigma algebra.webp" alt="Sigma Algebra sobre un conjunto" width="400" height="400">
+                <figcaption><strong>Sigma Algebra sobre un conjunto</strong></figcaption>
+            </figure>
+        </center>
+
+    </section>
+
+    <!-- Sección sobre conceptos básicos de la teoría de la medida -->
+    <section id="conceptos-basicos">
+        <h2>Conceptos Básicos</h2>
+        <ul>
+            <li><strong>Medida:</strong> Una función que asigna un número no negativo a un conjunto.</li>
+            <li><strong>Espacio medible:</strong> Un conjunto con una sigma-álgebra, que define los subconjuntos "medibles".</li>
+            <li><strong>Función medible:</strong> Una función que preserva la estructura de medida.</li>
+        </ul>
+        <h2>1. Medida</h2>
+        <p>
+            Una <strong>medida</strong> es una función que asigna un número real no negativo (incluyendo el infinito)
+            a ciertos subconjuntos de un conjunto dado, cumpliendo con las siguientes propiedades:
+        </p>
+        <ul>
+            <li>
+                <strong>No negatividad:</strong> Para cualquier conjunto medible <em>A</em>, la medida
+                <math>
+                    <mrow>
+                        <mi>μ</mi>
+                        <mo>(</mo>
+                        <mi>A</mi>
+                        <mo>)</mo>
+                        <mo>≥</mo>
+                        <mn>0</mn>
+                    </mrow>
+                </math>.
+            </li>
+            <li>
+                <strong>Medida del vacío:</strong> La medida del conjunto vacío es cero, es decir,
+                <math>
+                    <mrow>
+                        <mi>μ</mi>
+                        <mo>(</mo>
+                        <mi>∅</mi>
+                        <mo>)</mo>
+                        <mo>=</mo>
+                        <mn>0</mn>
+                    </mrow>
+                </math>.
+            </li>
+            <li>
+                <strong>Aditividad contable:</strong> Si
+                <math>
+                    <mrow>
+                        <mo>{</mo>
+                        <msub>
+                            <mi>A</mi>
+                            <mi>i</mi>
+                        </msub>
+                        <munder>
+                            <mo>}</mo>
+                            <mo>(</mo>
+                            <mi>i</mi>
+                            <mo>=</mo>
+                            <mn>1</mn>
+                            <mo>→</mo>
+                            <mo>∞</mo>
+                            <mo>)</mo>
+                        </munder>
+                    </mrow>
+                </math>
+                es una familia de conjuntos disjuntos dos a dos, entonces:
+                <br>
+                <math>
+                    <mrow>
+                        <mi>μ</mi>
+                        <mo>(</mo>
+                        <mrow>
+                            <mo>⋃</mo>
+                            <mrow>
+                                <msub>
+                                    <mi>A</mi>
+                                    <mi>i</mi>
+                                </msub>
+                            </mrow>
+                        </mrow>
+                        <mo>)</mo>
+                        <mo>=</mo>
+                        <munderover>
+                            <mo>∑</mo>
+                            <mrow>
+                                <mi>i</mi>
+                                <mo>=</mo>
+                                <mn>1</mn>
+                            </mrow>
+                            <mo>∞</mo>
+                        </munderover>
+                        <mi>μ</mi>
+                        <mo>(</mo>
+                        <msub>
+                            <mi>A</mi>
+                            <mi>i</mi>
+                        </msub>
+                        <mo>)</mo>
+                    </mrow>
+                </math>.
+            </li>
+        </ul>
+
+        <h2>2. Espacio Medible</h2>
+        <p>
+            Un <strong>espacio medible</strong> es un par
+            <math>
+                <mrow>
+                    <mo>(</mo>
+                    <mi>X</mi>
+                    <mo>,</mo>
+                    <mi>𝓕</mi>
+                    <mo>)</mo>
+                </mrow>
+            </math>, donde:
+        </p>
+        <ul>
+            <li><em>X:</em> es un conjunto llamado el <strong>espacio subyacente</strong>.</li>
+            <li>
+                <em>𝓕:</em> es una colección de subconjuntos de <em>X</em> que forma una
+                <strong>σ-álgebra</strong> sobre <em>X</em>.
+            </li>
+        </ul>
+
+        <h2>3. Sigma-Álgebra</h2>
+        <p>
+            Una <strong>σ-álgebra</strong> (o sigma-álgebra)
+            <math>
+                <mi>𝓕</mi>
+            </math>
+            sobre un conjunto
+            <math>
+                <mi>X</mi>
+            </math>
+            es una colección de subconjuntos de <em>X</em> que cumple las siguientes propiedades:
+        </p>
+        <ol>
+            <li>
+                <strong>El conjunto vacío pertenece a la σ-álgebra:</strong>
+                <math>
+                    <mrow>
+                        <mi>∅</mi>
+                        <mo>∈</mo>
+                        <mi>𝓕</mi>
+                    </mrow>
+                </math>.
+            </li>
+            <li>
+                <strong>Cerrada bajo complementos:</strong> Si
+                <math>
+                    <mi>A</mi>
+                    <mo>∈</mo>
+                    <mi>𝓕</mi>
+                </math>, entonces
+                <math>
+                    <mrow>
+                        <msup>
+                            <mi>A</mi>
+                            <mo>c</mo>
+                        </msup>
+                        <mo>=</mo>
+                        <mi>X</mi>
+                        <mo>∖</mo>
+                        <mi>A</mi>
+                        <mo>∈</mo>
+                        <mi>𝓕</mi>
+                    </mrow>
+                </math>.
+            </li>
+            <li>
+                <strong>Cerrada bajo uniones numerables:</strong> Si
+                <math>
+                    <mrow>
+                        <mo>{</mo>
+                        <msub>
+                            <mi>A</mi>
+                            <mi>i</mi>
+                        </msub>
+                        <munder>
+                            <mo>}</mo>
+                            <mo>(</mo>
+                            <mi>i</mi>
+                            <mo>=</mo>
+                            <mn>1</mn>
+                            <mo>→</mo>
+                            <mo>∞</mo>
+                            <mo>)</mo>
+                        </munder>
+
+                    </mrow>
+                </math>, entonces:
+                <br>
+                <math>
+                    <mrow>
+                        <mo>⋃</mo>
+                        <mrow>
+                            <msub>
+                                <mi>A</mi>
+                                <mi>i</mi>
+                            </msub>
+                        </mrow>
+                        <mo>∈</mo>
+                        <mi>𝓕</mi>
+                    </mrow>
+                </math>.
+            </li>
+        </ol>
+
+    </section>
+
+    <!-- Sección sobre la integral de Lebesgue -->
+    <section id="integral-lebesgue">
+        <h2>Integral de Lebesgue</h2>
+        <p>La integral de Lebesgue permite integrar funciones en un sentido más amplio que la integral de Riemann, especialmente útil para funciones con discontinuidades.</p>
+        <ul>
+            <li><strong>Propiedades de la integral de Lebesgue:</strong> Linealidad, monotonía y convergencia.</li>
+            <li><strong>Ventajas sobre la integral de Riemann:</strong> Mayor generalidad y aplicabilidad.</li>
+        </ul>
+    </section>
+
+    <!-- Sección de ejemplos para ilustrar los conceptos -->
+    <section id="ejemplos">
+        <h2>Videos Ilustrativos</h2>
+        <p>Aquí puedes ver ejemplos prácticos de cómo la teoría de la medida y la integral de Lebesgue se aplican a problemas reales.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/meINsrhMT7g?si=tw5P2hZwJqZjA5v7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </section>
+
+    <!-- Pie de página con enlaces adicionales -->
+    <footer>
+        <p>&copy; 2024 Teoría de la Medida y la Integral de Lebesgue</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+﻿/* Estilos generales para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #4c6ef5;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+    header h1 {
+        margin: 0;
+    }
+
+/* Secciones */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de las listas */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4c6ef5;
+    color: #fff;
+}
