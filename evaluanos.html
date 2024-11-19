@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: white;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            padding: 0.5em 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2em;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+        }
+        .product {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1em;
+            text-align: center;
+            width: 200px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product h3 {
+            font-size: 1.2em;
+            margin: 0.5em 0;
+        }
+        .product p {
+            margin: 0.5em 0;
+        }
+        .product button {
+            background-color: #28a745;
+            border: none;
+            color: white;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #218838;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        }
+
+        .form-container {
+            margin-top: 2em;
+            background: white;
+            padding: 1.5em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+            .form-container h2 {
+                text-align: center;
+                color: #333;
+            }
+
+            .form-container label {
+                display: block;
+                margin: 0.5em 0 0.3em;
+            }
+
+            .form-container input, .form-container textarea, .form-container select, .form-container button {
+                width: 100%;
+                padding: 0.5em;
+                margin-bottom: 1em;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .form-container button {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+
+                .form-container button:hover {
+                    background-color: #218838;
+                }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5em;
+            margin-top: 1em;
+        }
+
+            .social-icons a {
+                color: white;
+                font-size: 1.5em;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+                .social-icons a:hover {
+                    color: #ccc;
+                }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="SuperColmadoCholo.png" alt="Logo">
+        <h1>Super Colmado Cholo</h1>
+    </header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Carrito</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <main>
+       </section>
+
+        <h2>Formulario de Satisfacción</h2>
+        <section class="form-container">
+            <form action="#" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+
+                <label for="rating">Calificación tu colmado (1-5):</label>
+                <select id="rating" name="rating" required>
+                    <option value="1">1 - Muy insatisfecho</option>
+                    <option value="2">2 - Insatisfecho</option>
+                    <option value="3">3 - Neutral</option>
+                    <option value="4">4 - Satisfecho</option>
+                    <option value="5">5 - Muy satisfecho</option>
+                </select>
+
+                <label for="comments">Comentarios:</label>
+                <textarea id="comments" name="comments" rows="5" placeholder="Escribe tus comentarios aquí..."></textarea>
+
+                <button type="submit">Enviar Opinión</button>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Tienda en Línea. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
