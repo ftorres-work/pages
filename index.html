@@ -1,267 +1,263 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos de la Teoría de la Medida y la Integral de Lebesgue</title>
-    <!-- Enlace al archivo CSS externo para el estilo de la página -->
-    <link rel="stylesheet" href="StyleSheet1.css">
+    <title>Tienda en Línea</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: white;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            padding: 0.5em 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2em;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+        }
+        .product {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1em;
+            text-align: center;
+            width: 200px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product h3 {
+            font-size: 1.2em;
+            margin: 0.5em 0;
+        }
+        .product p {
+            margin: 0.5em 0;
+        }
+        .product button {
+            background-color: #28a745;
+            border: none;
+            color: white;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #218838;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        }
+
+        .form-container {
+            margin-top: 2em;
+            background: white;
+            padding: 1.5em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+            .form-container h2 {
+                text-align: center;
+                color: #333;
+            }
+
+            .form-container label {
+                display: block;
+                margin: 0.5em 0 0.3em;
+            }
+
+            .form-container input, .form-container textarea, .form-container select, .form-container button {
+                width: 100%;
+                padding: 0.5em;
+                margin-bottom: 1em;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .form-container button {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+
+                .form-container button:hover {
+                    background-color: #218838;
+                }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5em;
+            margin-top: 1em;
+        }
+
+            .social-icons a {
+                color: white;
+                font-size: 1.5em;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+                .social-icons a:hover {
+                    color: #ccc;
+                }
+    </style>
 </head>
 <body>
-    <!-- Encabezado de la página con el título principal -->
     <header>
-        <h1>Fundamentos de la Teoría de la Medida y la Integral de Lebesgue</h1>
-        <p>Una introducción a los conceptos clave y aplicaciones de la teoría.</p>
+        <img src="SuperColmadoCholo.png" alt="Logo">
+        <h1>Super Colmado Cholo</h1>
     </header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Carrito</a>
+        <a href="#">Contacto</a>
+    </nav>
 
-    <!-- Sección introductoria sobre teoría de la medida -->
-    <section id="introduccion">
-        <h2>Introducción</h2>
-        <p>
-            La <strong>teoría de la medida</strong> es una rama de las matemáticas que estudia cómo asignar un "tamaño" o "medida" a conjuntos en un espacio.
-            Es fundamental en áreas como el análisis real y es la base de la integral de Lebesgue.
-        </p>
-        <p>
-            La idea se base en lo siguiente: Existen conjuntos para los cuales no se puede determinar un tamaño o longitud simplemente considerando los extremos del conjunto.
-            Sin embargo siempre es posible considerar las caractirísticas de los subconjuntos y de los elementos de estos conjuntos antemencionados.
-        </p>
-        <center>
-            <figure>
-                <img src="Sigma algebra.webp" alt="Sigma Algebra sobre un conjunto" width="400" height="400">
-                <figcaption><strong>Sigma Algebra sobre un conjunto</strong></figcaption>
-            </figure>
-        </center>
+    <main>
+        <h2>Productos en especial</h2>
+        <section class="products">
+            <div class="product">
+                <img src="SalamiInduvecaSE1.47lb.png" alt="Salami induveca LB">
+                <h3>Libra de Salami induveca</h3>
+                <p>$95.00</p>
+                <button>Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="cartondehuevo.jpeg" alt="Producto 2">
+                <h3>Carton de huevo</h3>
+                <p>$165.00</p>
+                <button>Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="Costillasfrescas.jpg" alt="Producto 3">
+                <h3>Costillitas de cerdo LB</h3>
+                <p>$100.00</p>
+                <button>Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="LecheRica.jpg" alt="Producto 3">
+                <h3>Carton de leche</h3>
+                <p>$75.00</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </section>
 
-    </section>
+        <!--Trabajando con tablas-->
+        <section>
+            <h2>Eventos próximos</h2>
+            <center>
+                <table border="1">
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Evento</th>
+                        <th>Hora</th>
+                        <th>Ubicacion</th>
+                    </tr>
+                    <tr>
+                        <td>15 de diciembre </td>
+                        <td>Cubetazo de presidente </td>
+                        <td>4:00 pm a 10:00 pm </td>
+                        <td>Frente al colmado </td>
+                    </tr>
+                    <tr>
+                        <td>22 de diciembre</td>
+                        <td>Sancoho para los vecinos</td>
+                        <td>5:00 pm a 12:00 pm</td>
+                        <td>Parque Central Villa María</td>
+                    </tr>
+                </table>
+            </center>
 
-    <!-- Sección sobre conceptos básicos de la teoría de la medida -->
-    <section id="conceptos-basicos">
-        <h2>Conceptos Básicos</h2>
-        <ul>
-            <li><strong>Medida:</strong> Una función que asigna un número no negativo a un conjunto.</li>
-            <li><strong>Espacio medible:</strong> Un conjunto con una sigma-álgebra, que define los subconjuntos "medibles".</li>
-            <li><strong>Función medible:</strong> Una función que preserva la estructura de medida.</li>
-        </ul>
-        <h2>1. Medida</h2>
-        <p>
-            Una <strong>medida</strong> es una función que asigna un número real no negativo (incluyendo el infinito)
-            a ciertos subconjuntos de un conjunto dado, cumpliendo con las siguientes propiedades:
-        </p>
-        <ul>
-            <li>
-                <strong>No negatividad:</strong> Para cualquier conjunto medible <em>A</em>, la medida
-                <math>
-                    <mrow>
-                        <mi>μ</mi>
-                        <mo>(</mo>
-                        <mi>A</mi>
-                        <mo>)</mo>
-                        <mo>≥</mo>
-                        <mn>0</mn>
-                    </mrow>
-                </math>.
-            </li>
-            <li>
-                <strong>Medida del vacío:</strong> La medida del conjunto vacío es cero, es decir,
-                <math>
-                    <mrow>
-                        <mi>μ</mi>
-                        <mo>(</mo>
-                        <mi>∅</mi>
-                        <mo>)</mo>
-                        <mo>=</mo>
-                        <mn>0</mn>
-                    </mrow>
-                </math>.
-            </li>
-            <li>
-                <strong>Aditividad contable:</strong> Si
-                <math>
-                    <mrow>
-                        <mo>{</mo>
-                        <msub>
-                            <mi>A</mi>
-                            <mi>i</mi>
-                        </msub>
-                        <munder>
-                            <mo>}</mo>
-                            <mo>(</mo>
-                            <mi>i</mi>
-                            <mo>=</mo>
-                            <mn>1</mn>
-                            <mo>→</mo>
-                            <mo>∞</mo>
-                            <mo>)</mo>
-                        </munder>
-                    </mrow>
-                </math>
-                es una familia de conjuntos disjuntos dos a dos, entonces:
-                <br>
-                <math>
-                    <mrow>
-                        <mi>μ</mi>
-                        <mo>(</mo>
-                        <mrow>
-                            <mo>⋃</mo>
-                            <mrow>
-                                <msub>
-                                    <mi>A</mi>
-                                    <mi>i</mi>
-                                </msub>
-                            </mrow>
-                        </mrow>
-                        <mo>)</mo>
-                        <mo>=</mo>
-                        <munderover>
-                            <mo>∑</mo>
-                            <mrow>
-                                <mi>i</mi>
-                                <mo>=</mo>
-                                <mn>1</mn>
-                            </mrow>
-                            <mo>∞</mo>
-                        </munderover>
-                        <mi>μ</mi>
-                        <mo>(</mo>
-                        <msub>
-                            <mi>A</mi>
-                            <mi>i</mi>
-                        </msub>
-                        <mo>)</mo>
-                    </mrow>
-                </math>.
-            </li>
-        </ul>
+        </section>
 
-        <h2>2. Espacio Medible</h2>
-        <p>
-            Un <strong>espacio medible</strong> es un par
-            <math>
-                <mrow>
-                    <mo>(</mo>
-                    <mi>X</mi>
-                    <mo>,</mo>
-                    <mi>𝓕</mi>
-                    <mo>)</mo>
-                </mrow>
-            </math>, donde:
-        </p>
-        <ul>
-            <li><em>X:</em> es un conjunto llamado el <strong>espacio subyacente</strong>.</li>
-            <li>
-                <em>𝓕:</em> es una colección de subconjuntos de <em>X</em> que forma una
-                <strong>σ-álgebra</strong> sobre <em>X</em>.
-            </li>
-        </ul>
+        <h2>Formulario de Satisfacción del delivery</h2>
+        <section class="form-container">
+            <form action="#" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
 
-        <h2>3. Sigma-Álgebra</h2>
-        <p>
-            Una <strong>σ-álgebra</strong> (o sigma-álgebra)
-            <math>
-                <mi>𝓕</mi>
-            </math>
-            sobre un conjunto
-            <math>
-                <mi>X</mi>
-            </math>
-            es una colección de subconjuntos de <em>X</em> que cumple las siguientes propiedades:
-        </p>
-        <ol>
-            <li>
-                <strong>El conjunto vacío pertenece a la σ-álgebra:</strong>
-                <math>
-                    <mrow>
-                        <mi>∅</mi>
-                        <mo>∈</mo>
-                        <mi>𝓕</mi>
-                    </mrow>
-                </math>.
-            </li>
-            <li>
-                <strong>Cerrada bajo complementos:</strong> Si
-                <math>
-                    <mi>A</mi>
-                    <mo>∈</mo>
-                    <mi>𝓕</mi>
-                </math>, entonces
-                <math>
-                    <mrow>
-                        <msup>
-                            <mi>A</mi>
-                            <mo>c</mo>
-                        </msup>
-                        <mo>=</mo>
-                        <mi>X</mi>
-                        <mo>∖</mo>
-                        <mi>A</mi>
-                        <mo>∈</mo>
-                        <mi>𝓕</mi>
-                    </mrow>
-                </math>.
-            </li>
-            <li>
-                <strong>Cerrada bajo uniones numerables:</strong> Si
-                <math>
-                    <mrow>
-                        <mo>{</mo>
-                        <msub>
-                            <mi>A</mi>
-                            <mi>i</mi>
-                        </msub>
-                        <munder>
-                            <mo>}</mo>
-                            <mo>(</mo>
-                            <mi>i</mi>
-                            <mo>=</mo>
-                            <mn>1</mn>
-                            <mo>→</mo>
-                            <mo>∞</mo>
-                            <mo>)</mo>
-                        </munder>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
 
-                    </mrow>
-                </math>, entonces:
-                <br>
-                <math>
-                    <mrow>
-                        <mo>⋃</mo>
-                        <mrow>
-                            <msub>
-                                <mi>A</mi>
-                                <mi>i</mi>
-                            </msub>
-                        </mrow>
-                        <mo>∈</mo>
-                        <mi>𝓕</mi>
-                    </mrow>
-                </math>.
-            </li>
-        </ol>
+                <label for="rating">Calificación de la tienda (1-5):</label>
+                <select id="rating" name="rating" required>
+                    <option value="1">1 - Muy insatisfecho</option>
+                    <option value="2">2 - Insatisfecho</option>
+                    <option value="3">3 - Neutral</option>
+                    <option value="4">4 - Satisfecho</option>
+                    <option value="5">5 - Muy satisfecho</option>
+                </select>
 
-    </section>
+                <label for="comments">Comentarios:</label>
+                <textarea id="comments" name="comments" rows="5" placeholder="Escribe tus comentarios aquí..."></textarea>
 
-    <!-- Sección sobre la integral de Lebesgue -->
-    <section id="integral-lebesgue">
-        <h2>Integral de Lebesgue</h2>
-        <p>La integral de Lebesgue permite integrar funciones en un sentido más amplio que la integral de Riemann, especialmente útil para funciones con discontinuidades.</p>
-        <ul>
-            <li><strong>Propiedades de la integral de Lebesgue:</strong> Linealidad, monotonía y convergencia.</li>
-            <li><strong>Ventajas sobre la integral de Riemann:</strong> Mayor generalidad y aplicabilidad.</li>
-        </ul>
-    </section>
+                <button type="submit">Enviar Opinión</button>
+            </form>
+        </section>
 
-    <!-- Sección de ejemplos para ilustrar los conceptos -->
-    <section id="ejemplos">
-        <h2>Videos Ilustrativos</h2>
-        <p>Aquí puedes ver ejemplos prácticos de cómo la teoría de la medida y la integral de Lebesgue se aplican a problemas reales.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/meINsrhMT7g?si=tw5P2hZwJqZjA5v7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </main>
 
-    </section>
-
-    <!-- Pie de página con enlaces adicionales -->
     <footer>
-        <p>&copy; 2024 Teoría de la Medida y la Integral de Lebesgue</p>
+
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <img src="facebook.png" alt="Facebook Logo" width="30" height="30">
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <img src="insta.png" alt="Instagram Logo" width="35" height="35">
+            </a>
+        </div>
+        <p>&copy; 2024 Super Colmado Cholo. Todos los derechos reservados.</p>
     </footer>
 </body>
-
 </html>
